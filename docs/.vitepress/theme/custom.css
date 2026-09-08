@@ -1,0 +1,187 @@
+/* 首页固定为 100vh，背景图撑满该高度 */
+.Layout:has(.VPHome) {
+  position: relative;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  --vp-c-text-1: #ffffff;
+  --vp-c-brand-1: #ffffff;
+  --vp-nav-bg-color: transparent;
+}
+
+.Layout:has(.VPHome)::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  /* 需带上 vitepress base，线上才是 /soul-hut/images/... */
+  background-image: url('/soul-hut/images/瑶老师/bg.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* 轻微遮罩，保证标题可读 */
+.Layout:has(.VPHome)::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 28, 48, 0.35) 0%,
+    rgba(20, 28, 48, 0.15) 45%,
+    rgba(20, 28, 48, 0.4) 100%
+  );
+  pointer-events: none;
+}
+
+.Layout:has(.VPHome) .VPNav,
+.Layout:has(.VPHome) .VPContent {
+  position: relative;
+  z-index: 1;
+}
+
+.Layout:has(.VPHome) .VPFooter {
+  display: none;
+}
+
+.Layout:has(.VPHome) .VPContent,
+.Layout:has(.VPHome) .VPHome {
+  background: transparent !important;
+  height: 100vh;
+  max-height: 100vh;
+  min-height: 0 !important;
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.VPHome .VPHero {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding-top: calc(var(--vp-nav-height) + 2rem) !important;
+  padding-bottom: 0 !important;
+  padding-left: clamp(1.5rem, 5vw, 4rem) !important;
+  padding-right: 1.5rem !important;
+  margin: 0 !important;
+}
+
+.VPHome .VPHero .container {
+  margin: 0 !important;
+  max-width: none !important;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.VPHome .VPHero .main {
+  text-align: left !important;
+  max-width: 36rem;
+  margin: 0 !important;
+}
+
+.VPHome .VPHero .actions {
+  justify-content: flex-start !important;
+}
+
+.VPHome .name .clip,
+.VPHome .text,
+.VPHome .tagline {
+  color: #f7f4ef !important;
+  text-shadow: 0 1px 18px rgba(0, 0, 0, 0.25);
+}
+
+.VPHome .name .clip {
+  -webkit-text-fill-color: #f7f4ef !important;
+  background: none !important;
+}
+
+.VPHome .VPButton.brand {
+  background-color: rgba(247, 244, 239, 0.92);
+  color: #1c2438;
+  border-color: transparent;
+}
+
+.VPHome .VPButton.brand:hover {
+  background-color: #fff;
+}
+
+/* 首页导航透明 + 白色文字 */
+.Layout:has(.VPHome) .VPNavBar {
+  background-color: transparent !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .content-body {
+  background-color: transparent !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .divider,
+.Layout:has(.VPHome) .VPNavBar.has-sidebar .content-body {
+  background-color: transparent !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .title,
+.Layout:has(.VPHome) .VPNavBar .title span,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarTitle .title,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarMenuLink,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarMenuLink span,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarExtra,
+.Layout:has(.VPHome) .VPNavBar button,
+.Layout:has(.VPHome) .VPNavBar .vpi-social-github,
+.Layout:has(.VPHome) .VPNavBar .VPSwitch,
+.Layout:has(.VPHome) .VPNavBar .VPSwitchAppearance,
+.Layout:has(.VPHome) .VPNavBar .wrapper {
+  color: #ffffff !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .VPNavBarMenu .VPNavBarMenuLink {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .VPNavBarMenu .VPNavBarMenuLink:hover,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarMenu .VPNavBarMenuLink.active {
+  color: #ffffff !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .VPSwitchAppearance .check,
+.Layout:has(.VPHome) .VPNavBar .VPSwitch .check,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarHamburger .container .top,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarHamburger .container .middle,
+.Layout:has(.VPHome) .VPNavBar .VPNavBarHamburger .container .bottom {
+  background-color: #ffffff !important;
+}
+
+.Layout:has(.VPHome) .VPNavBar .VPSwitchAppearance .icon,
+.Layout:has(.VPHome) .VPNavBar svg {
+  color: #ffffff !important;
+  fill: currentColor;
+}
+
+/* 行内代码 `...` 样式 */
+.vp-doc :not(pre) > code {
+  background-color: #fff5f5 !important;
+  color: #ff502c !important;
+}
+
+/* 图片点击放大 */
+.vp-doc img {
+  cursor: zoom-in;
+}
+
+.medium-zoom-overlay {
+  z-index: 100;
+}
+
+.medium-zoom-image--opened {
+  z-index: 101;
+}
