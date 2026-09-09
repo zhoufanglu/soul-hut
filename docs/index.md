@@ -9,5 +9,5 @@ hero:
   actions:
     - theme: brand
       text: 瑶同学
-      link: /瑶同学/第一次见面
+      link: /瑶同学/一些碎碎念
 ---
