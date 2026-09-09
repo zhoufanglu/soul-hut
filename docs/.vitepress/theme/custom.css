@@ -191,9 +191,10 @@ html.dark .vp-doc :not(pre) > code {
   text-indent: 2em !important;
 }
 
-/* 日期行、引用不缩进 */
+/* 日期行、引用、加粗小标题不缩进 */
 .vp-doc h1 + p,
 .vp-doc p:has(> code:only-child),
+.vp-doc p:has(> strong:only-child),
 .vp-doc blockquote p {
   text-indent: 0 !important;
 }
