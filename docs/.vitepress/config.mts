@@ -9,17 +9,18 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: '首页', link: '/' },
-      { text: '瑶老师', link: '/瑶老师/第一次见面' }
+      { text: '瑶同学', link: '/瑶同学/一些碎碎念' }
     ],
 
     sidebar: [
       {
-        text: '瑶老师',
+        text: '瑶同学',
         items: [
-          { text: '第一次见面', link: '/瑶老师/第一次见面' },
-          { text: '第二次见面', link: '/瑶老师/第二次见面' },
-          { text: '第一次给她的信', link: '/瑶老师/第一次给她的信' },
-          { text: '想她的碎碎念', link: '/瑶老师/想她的碎碎念' }
+          { text: '一些碎碎念(想你就更新～)', link: '/瑶同学/一些碎碎念' },
+          { text: '第一次见面', link: '/瑶同学/第一次见面' },
+          { text: '第二次见面', link: '/瑶同学/第二次见面' },
+          { text: '第一次给她的信', link: '/瑶同学/第一次给她的信' },
+          { text: '瑶同学和小吴同学', link: '/瑶同学/瑶同学和小吴同学' }
         ]
       }
     ],

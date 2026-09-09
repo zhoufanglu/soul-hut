@@ -18,7 +18,7 @@
   height: 100vh;
   z-index: 0;
   /* 需带上 vitepress base，线上才是 /soul-hut/images/... */
-  background-image: url('/soul-hut/images/瑶老师/bg.jpg');
+  background-image: url('/soul-hut/images/瑶同学/bg.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

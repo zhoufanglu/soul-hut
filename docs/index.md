@@ -8,6 +8,6 @@ hero:
   tagline: 写给想记住的人与时刻
   actions:
     - theme: brand
-      text: 瑶老师
-      link: /瑶老师/第一次见面
+      text: 瑶同学
+      link: /瑶同学/第一次见面
 ---
