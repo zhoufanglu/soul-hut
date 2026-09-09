@@ -173,6 +173,12 @@
   color: #ff502c !important;
 }
 
+/* 黑暗模式下去掉行内代码背景色 */
+html.dark .vp-doc :not(pre) > code {
+  background-color: transparent !important;
+  color: #ff502c !important;
+}
+
 /* 图片点击放大 */
 .vp-doc img {
   cursor: zoom-in;
