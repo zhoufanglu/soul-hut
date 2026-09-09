@@ -182,6 +182,37 @@ html.dark .vp-doc :not(pre) > code {
 /* 图片点击放大 */
 .vp-doc img {
   cursor: zoom-in;
+  border-radius: 8px;
+  margin: 1rem 0;
+}
+
+/* 正文首行缩进两个字 */
+.vp-doc p {
+  text-indent: 2em !important;
+}
+
+/* 日期行、引用不缩进 */
+.vp-doc h1 + p,
+.vp-doc p:has(> code:only-child),
+.vp-doc blockquote p {
+  text-indent: 0 !important;
+}
+
+.vp-doc h3 {
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.vp-doc h3 + p {
+  margin-top: 0.5rem;
+}
+
+.vp-doc blockquote {
+  margin: 1rem 0 1.25rem;
+}
+
+.vp-doc hr {
+  margin: 2rem 0;
 }
 
 .medium-zoom-overlay {
