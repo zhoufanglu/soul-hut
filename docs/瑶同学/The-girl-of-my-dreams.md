@@ -125,3 +125,14 @@ date: "2026-09-11"
 <DreamImage src="/images/dreamGirl/青少年时期-05.jpg" alt="青少年时期" />
 
 <DreamImage src="/images/dreamGirl/青少年时期-06.jpg" alt="青少年时期" />
+
+
+## 美甲
+- 这是我第一次做美甲。。。其实我很幸福，无论是做的的时候， 还是做完，还是卸甲的时候～ 其实我很想留的。。但是 呜呜。。。
+- 真的好好看啊。我的比你的好看。嗯 好看多了捏
+- 后面如果有机会的话， 希望每年都能陪你做美甲。
+
+<DreamImage src="/images/dreamGirl/美甲-01.jpg" alt="美甲" />
+
+<DreamImage src="/images/dreamGirl/美甲-02.jpg" alt="美甲" />
+ 
