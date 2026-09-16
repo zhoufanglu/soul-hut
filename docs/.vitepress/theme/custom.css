@@ -231,7 +231,7 @@ html.dark .vp-doc :not(pre) > code {
 
 /* 正文首行缩进两个字 */
 .vp-doc p {
-  text-indent: 2em !important;
+  /* text-indent: 2em !important; */
 }
 
 /* 日期行、引用、加粗小标题不缩进 */
