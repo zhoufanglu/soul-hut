@@ -259,6 +259,17 @@ html.dark .vp-doc :not(pre) > code {
   margin: 2rem 0;
 }
 
+/* 性格说明框 */
+.vp-doc .custom-block.info {
+  border-radius: 12px;
+  margin: 1.5rem 0;
+}
+
+.vp-doc .custom-block.info p,
+.vp-doc .custom-block.info li {
+  text-indent: 0 !important;
+}
+
 .medium-zoom-overlay {
   z-index: 100;
 }
