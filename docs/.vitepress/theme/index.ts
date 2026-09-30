@@ -2,10 +2,16 @@ import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import type { Zoom } from 'medium-zoom'
 import { onMounted, watch, nextTick } from 'vue'
-import { useRoute } from 'vitepress'
+import { inBrowser, useRoute, withBase } from 'vitepress'
 import DreamVideo from './DreamVideo.vue'
 import DreamImage from './DreamImage.vue'
 import './custom.css'
+
+declare global {
+  interface Window {
+    _hmt?: Array<unknown[]>
+  }
+}
 
 export default {
   extends: DefaultTheme,
@@ -24,13 +30,25 @@ export default {
       })
     }
 
+    const trackPageview = (path: string) => {
+      if (!inBrowser) return
+      window._hmt = window._hmt || []
+      window._hmt.push(['_trackPageview', withBase(path)])
+    }
+
     onMounted(() => {
       initZoom()
+      trackPageview(route.path)
     })
 
     watch(
       () => route.path,
-      () => nextTick(() => initZoom())
+      (path) => {
+        nextTick(() => {
+          initZoom()
+          trackPageview(path)
+        })
+      }
     )
   }
 }
