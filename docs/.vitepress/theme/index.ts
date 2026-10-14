@@ -1,10 +1,11 @@
 import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import type { Zoom } from 'medium-zoom'
-import { onMounted, watch, nextTick } from 'vue'
+import { h, onMounted, watch, nextTick } from 'vue'
 import { inBrowser, useRoute, withBase } from 'vitepress'
 import DreamVideo from './DreamVideo.vue'
 import DreamImage from './DreamImage.vue'
+import BgMusic from './BgMusic.vue'
 import './custom.css'
 
 declare global {
@@ -15,6 +16,11 @@ declare global {
 
 export default {
   extends: DefaultTheme,
+  Layout() {
+    return h(DefaultTheme.Layout, null, {
+      'layout-bottom': () => h(BgMusic)
+    })
+  },
   enhanceApp({ app }) {
     app.component('DreamVideo', DreamVideo)
     app.component('DreamImage', DreamImage)
