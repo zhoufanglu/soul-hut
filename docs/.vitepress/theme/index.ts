@@ -2,7 +2,7 @@ import DefaultTheme from 'vitepress/theme'
 import mediumZoom from 'medium-zoom'
 import type { Zoom } from 'medium-zoom'
 import { h, onMounted, watch, nextTick } from 'vue'
-import { inBrowser, useRoute, withBase } from 'vitepress'
+import { inBrowser, useRoute } from 'vitepress'
 import DreamVideo from './DreamVideo.vue'
 import DreamImage from './DreamImage.vue'
 import BgMusic from './BgMusic.vue'
@@ -36,10 +36,11 @@ export default {
       })
     }
 
-    const trackPageview = (path: string) => {
+    // 百度统计暂时关闭，需要恢复时取消注释即可
+    const trackPageview = (_path: string) => {
       if (!inBrowser) return
-      window._hmt = window._hmt || []
-      window._hmt.push(['_trackPageview', withBase(path)])
+      // window._hmt = window._hmt || []
+      // window._hmt.push(['_trackPageview', withBase(_path)])
     }
 
     onMounted(() => {

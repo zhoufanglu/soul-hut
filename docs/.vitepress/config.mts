@@ -5,21 +5,22 @@ export default defineConfig({
   base: '/soul-hut/',
   title: 'Soul Hut',
   description: 'A VitePress Site',
-  head: [
-    [
-      'script',
-      {},
-      `
-var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?a2ac393cc8d512c9cb6b53eefc860dd1";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();
-      `.trim()
-    ]
-  ],
+  // 百度统计暂时关闭，需要恢复时取消注释即可
+  // head: [
+  //   [
+  //     'script',
+  //     {},
+  //     `
+  // var _hmt = _hmt || [];
+  // (function() {
+  //   var hm = document.createElement("script");
+  //   hm.src = "https://hm.baidu.com/hm.js?a2ac393cc8d512c9cb6b53eefc860dd1";
+  //   var s = document.getElementsByTagName("script")[0];
+  //   s.parentNode.insertBefore(hm, s);
+  // })();
+  //     `.trim()
+  //   ]
+  // ],
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
